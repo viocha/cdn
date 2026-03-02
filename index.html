@@ -102,7 +102,7 @@
     if (!audio) {
       console.log(`Lazy loading: ${name}`);
       const fileName = getFileName(name);
-      audio = new Audio(`data/${fileName}.wav`);
+      audio = new Audio(`piano-sample/${fileName}.wav`);
       audioCache[name] = audio;
     } else {
       audio.currentTime = 0; 
@@ -119,7 +119,7 @@
         const octave = parseInt(k.name.slice(-1), 10);
         if ([3, 4, 5].includes(octave)) {
           const fileName = getFileName(k.name);
-          const audio = new Audio(`data/${fileName}.wav`);
+          const audio = new Audio(`piano-sample/${fileName}.wav`);
           audio.load();
           audioCache[k.name] = audio;
         }
